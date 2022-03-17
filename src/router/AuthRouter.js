@@ -6,15 +6,15 @@ import '../css/login-register.css';
 import LoginRegisterLayout from '../layouts/LoginRegisterLayout';
 
 const AuthRouter = () => {
-    return (
-        <LoginRegisterLayout>
-            <Routes>
-                <Route path="/login" element={<LoginView />} />
-                <Route path="/register" element={<RegisterView />} />
-                <Route path="*" element={<h1>404</h1>} />
-            </Routes>
-        </LoginRegisterLayout>
-    )
+	return (
+		<LoginRegisterLayout>
+			<Routes>
+				<Route path='/login' element={<LoginView />} />
+				<Route path='/register' element={<RegisterView />} />
+				<Route path='*' element={<h1>404</h1>} />
+			</Routes>
+		</LoginRegisterLayout>
+	);
 };
 
 export default AuthRouter;

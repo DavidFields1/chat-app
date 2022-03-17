@@ -1,22 +1,19 @@
-import React from 'react'
-import Contact from './Contact'
-import Search from './Search'
+import React from 'react';
+import Contact from './Contact';
+import Search from './Search';
 
 const InboxContacts = () => {
-    return (
-        <div className="inbox_people">
+	return (
+		<div className='inbox_people'>
+			<Search />
 
-            <Search />
+			<div className='inbox_chat'>
+				<Contact />
 
-            <div className="inbox_chat">
+				<div className='extra_space'></div>
+			</div>
+		</div>
+	);
+};
 
-                <Contact />
-
-                <div className="extra_space"></div>
-
-            </div>
-        </div>
-    )
-}
-
-export default InboxContacts
+export default InboxContacts;
