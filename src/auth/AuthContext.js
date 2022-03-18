@@ -1,6 +1,7 @@
-import React, { createContext, useCallback, useState } from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 import { fetchUrl, fetchWithToken } from '../helpers/fetch';
 import PropTypes from 'prop-types';
+import { ChatContext } from '../context/chat/ChatContext';
 
 export const AuthContext = createContext();
 

@@ -1,14 +1,22 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
+import { hourMonth } from '../helpers/formatDate';
 
-const OutgoingMessage = () => {
+const OutgoingMessage = ({ messageData }) => {
+	const { message, createdAt } = messageData;
 	return (
 		<div className='outgoing_msg'>
 			<div className='sent_msg'>
-				<p>Test which is a new approach to have all solutions</p>
-				<span className='time_date'> 11:01 AM | June 9</span>
+				<p>{message}</p>
+				<span className='time_date'> {hourMonth(createdAt)} </span>
 			</div>
 		</div>
 	);
+};
+
+OutgoingMessage.protoTypes = {
+	messageData: PropTypes.object.isRequired,
 };
 
 export default OutgoingMessage;
